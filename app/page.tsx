@@ -43,8 +43,8 @@ export default function Home() {
                 </div>
                 <h3 className="text-3xl font-black uppercase">Software Engineer</h3>
                 <p className="font-bold">
-                  Majoring in Computer Engineering with <strong>IPK 3.79</strong>.
-                  Focused on building robust systems and NeoBrutalist UI.
+                  Multimedia & Network Engineering student at <strong>PNUP</strong>.
+                  IPK 3.79. Research Intern at <strong>BRIN</strong>.
                 </p>
               </div>
             </Card>
