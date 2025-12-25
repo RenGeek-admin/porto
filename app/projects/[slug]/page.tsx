@@ -73,18 +73,18 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
 
                     <div className="flex gap-4">
                         {project.links.github && (
-                            <Button onClick={() => { }} className="pointer-events-auto">
-                                <a href={project.links.github} target="_blank" rel="noopener noreferrer" className="flex items-center">
+                            <a href={project.links.github} target="_blank" rel="noopener noreferrer">
+                                <Button className="pointer-events-auto">
                                     <Github className="mr-2 h-5 w-5" /> View Code
-                                </a>
-                            </Button>
+                                </Button>
+                            </a>
                         )}
                         {project.links.demo && (
-                            <Button variant="secondary" onClick={() => { }}>
-                                <a href={project.links.demo} target="_blank" rel="noopener noreferrer" className="flex items-center">
+                            <a href={project.links.demo} target="_blank" rel="noopener noreferrer">
+                                <Button variant="secondary">
                                     <ExternalLink className="mr-2 h-5 w-5" /> Live Demo
-                                </a>
-                            </Button>
+                                </Button>
+                            </a>
                         )}
                     </div>
                 </header>
