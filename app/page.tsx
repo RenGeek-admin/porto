@@ -1,65 +1,77 @@
-import Image from "next/image";
+import { Button } from "@/components/ui/Button";
+import { Card } from "@/components/ui/Card";
+import { Navbar } from "@/components/layout/Navbar";
+import { ArrowRight, Code, Laptop, Sparkles } from "lucide-react";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <main className="min-h-screen">
+      <Navbar />
+
+      {/* Hero Section */}
+      <section className="mx-auto max-w-7xl px-6 py-20 md:py-32">
+        <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:items-center">
+          <div>
+            <div className="inline-flex items-center gap-2 border-4 border-black bg-[#FFD100] px-4 py-1 font-bold shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+              <Sparkles size={20} />
+              <span>Available for Hire</span>
+            </div>
+            <h1 className="mt-8 text-6xl font-black uppercase leading-[0.9] tracking-tighter md:text-8xl">
+              Building <span className="text-[#00C2FF]">Digital</span> <br />
+              Experiences <span className="text-[#FF90E8]">Boldly</span>.
+            </h1>
+            <p className="mt-8 max-w-xl text-xl font-bold leading-relaxed">
+              I am a Fullstack Engineer specialized in high-performance web applications
+              with a soul. Using Next.js, Notion, and a lot of caffeine.
+            </p>
+            <div className="mt-10 flex flex-wrap gap-4">
+              <Button size="lg" variant="primary">
+                View My Projects <ArrowRight className="ml-2" />
+              </Button>
+              <Button size="lg" variant="outline">
+                Read Blog
+              </Button>
+            </div>
+          </div>
+
+          <div className="relative">
+            <Card color="bg-[#FF90E8]" className="rotate-3">
+              <div className="space-y-4">
+                <div className="h-12 w-12 border-4 border-black bg-white p-2">
+                  <Code size={32} />
+                </div>
+                <h3 className="text-3xl font-black uppercase">Senior Fullstack</h3>
+                <p className="font-bold">
+                  Expert in React, TypeScript, and Node.js.
+                  Focused on clean architecture and brutal UI.
+                </p>
+              </div>
+            </Card>
+            <Card color="bg-[#00C2FF]" className="absolute -bottom-20 -right-8 -rotate-6 hidden md:block">
+              <div className="flex items-center gap-4">
+                <Laptop size={32} />
+                <span className="text-xl font-black uppercase">5+ Years Exp</span>
+              </div>
+            </Card>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </section>
+
+      {/* Skills Teaser */}
+      <section className="bg-black py-20 text-white">
+        <div className="mx-auto max-w-7xl px-6">
+          <h2 className="text-4xl font-black uppercase italic tracking-tighter md:text-6xl">
+            My Arsenal_
+          </h2>
+          <div className="mt-12 grid grid-cols-2 gap-4 md:grid-cols-4">
+            {['Next.js', 'TypeScript', 'Tailwind', 'Node.js', 'PostgreSQL', 'Docker', 'AWS', 'Notion API'].map((skill) => (
+              <div key={skill} className="border-2 border-white p-4 text-center font-bold uppercase hover:bg-white hover:text-black transition-colors">
+                {skill}
+              </div>
+            ))}
+          </div>
         </div>
-      </main>
-    </div>
+      </section>
+    </main>
   );
 }
