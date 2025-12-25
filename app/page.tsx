@@ -21,8 +21,9 @@ export default function Home() {
               Experiences <span className="text-[#FF90E8]">Boldly</span>.
             </h1>
             <p className="mt-8 max-w-xl text-xl font-bold leading-relaxed">
-              I am a Fullstack Engineer specialized in high-performance web applications
-              with a soul. Using Next.js, Notion, and a lot of caffeine.
+              I am <strong>Fauzan Mugi Irwansyah</strong>, a passionate developer from
+              <strong> Politeknik Negeri Ujung Pandang</strong>. I build high-performance
+              web applications with a bold aesthetic and smooth experience.
             </p>
             <div className="mt-10 flex flex-wrap gap-4">
               <Button size="lg" variant="primary">
@@ -40,17 +41,17 @@ export default function Home() {
                 <div className="h-12 w-12 border-4 border-black bg-white p-2">
                   <Code size={32} />
                 </div>
-                <h3 className="text-3xl font-black uppercase">Senior Fullstack</h3>
+                <h3 className="text-3xl font-black uppercase">Software Engineer</h3>
                 <p className="font-bold">
-                  Expert in React, TypeScript, and Node.js.
-                  Focused on clean architecture and brutal UI.
+                  Majoring in Computer Engineering with <strong>IPK 3.79</strong>.
+                  Focused on building robust systems and NeoBrutalist UI.
                 </p>
               </div>
             </Card>
             <Card color="bg-[#00C2FF]" className="absolute -bottom-20 -right-8 -rotate-6 hidden md:block">
               <div className="flex items-center gap-4">
                 <Laptop size={32} />
-                <span className="text-xl font-black uppercase">5+ Years Exp</span>
+                <span className="text-xl font-black uppercase">IPK 3.79</span>
               </div>
             </Card>
           </div>

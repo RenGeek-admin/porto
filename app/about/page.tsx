@@ -21,9 +21,14 @@ export default function AboutPage() {
 
                     <div className="md:col-span-2 space-y-6 text-xl font-bold">
                         <p>
-                            I am a digital architect based in the ethereal realms of code.
-                            My journey started with a simple "Hello World" and evolved into
-                            crafting complex systems that live on the edge.
+                            Hello! I am <strong>Fauzan Mugi Irwansyah</strong>.
+                            I am a student at <strong>Politeknik Negeri Ujung Pandang</strong>
+                            passionate about software development and digital architecture.
+                        </p>
+                        <p>
+                            My journey is driven by a commitment to excellence, currently
+                            maintaining a <strong>GPA (IPK) of 3.79</strong> while exploring
+                            the deep technicalities of modern web engines.
                         </p>
                         <p>
                             I believe in <span className="underline decoration-[#00C2FF] decoration-4">brutal honesty</span> in design.
@@ -37,12 +42,12 @@ export default function AboutPage() {
                 </div>
 
                 <Card color="bg-white">
-                    <h3 className="text-3xl font-black uppercase mb-6">Experience_</h3>
+                    <h3 className="text-3xl font-black uppercase mb-6">Education & Experience_</h3>
                     <div className="space-y-8">
                         {[
-                            { role: 'Senior Developer', co: 'Tech Titans', period: '2022 - Present' },
-                            { role: 'Mid-Level Engineer', co: 'Startup X', period: '2020 - 2022' },
-                            { role: 'Junior Web Geek', co: 'Local Agency', period: '2018 - 2020' },
+                            { role: 'Computer Engineering Student', co: 'Politeknik Negeri Ujung Pandang', period: 'GPA 3.79', isEd: true },
+                            { role: 'Web Developer Intern', co: 'Tech Titans', period: '2023 - Present' },
+                            { role: 'Junior Programmer', co: 'Code Lab PNUP', period: '2022 - 2023' },
                         ].map((exp, i) => (
                             <div key={i} className="flex justify-between items-start border-b-2 border-black pb-4 last:border-0 last:pb-0">
                                 <div>
